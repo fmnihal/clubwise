@@ -19,6 +19,7 @@ export class Middleware {
   public static validateLogin(req: Request, res: Response, next: NextFunction) {
     try {
       const { email, password } = req.body;
+      console.log(email, password)
       const emailRgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRgx.test(email))
         return res.status(401).json({ error: true, message: "Invalid email" });

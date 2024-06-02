@@ -14,7 +14,8 @@ export default function CreatePost() {
   const formRef = useRef<HTMLFormElement>({} as HTMLFormElement);
 
   useEffect(() => {
-    setClubInfo(clubs.find(club => club.name.toLowerCase() == (name as string).toLowerCase()));
+      if(!name) return;
+      setClubInfo(clubs.find(club => club.name.toLowerCase() == (name as string).toLowerCase()));
   }, [name])
 
   async function privatePublish(e: MouseEvent) {
