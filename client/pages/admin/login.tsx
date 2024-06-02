@@ -13,8 +13,7 @@ export default function AdminLogin() {
         const password = formData.get("password") as string;
         try {
             const res = await axios.post(`${serverURL}/v1/api/auth/login`, { email, password }, { withCredentials: true });
-            if (res.data.error) alert(res.data.message);
-            else router.push("/admin");
+            router.push("/admin");
         } catch (error) {
             if (axios.isAxiosError(error)) alert(error.response?.data.message);
             else alert("Unexpected error occured. Please try again later.");
