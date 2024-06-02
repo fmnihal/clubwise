@@ -1,8 +1,8 @@
+import ClubSideBarAdmin from "@/components/ClubSideBarAdmin";
 import Sidebar from "@/components/Sidebar";
 import { clubs } from "@/libs/clubs";
 import { serverURL } from "@/libs/const";
 import axios, { AxiosError } from "axios";
-import { GetServerSidePropsContext } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { MouseEvent, use, useEffect, useRef, useState } from "react";
@@ -52,7 +52,7 @@ export default function CreatePost() {
   }
   return (
     <div className="flex gap-4 min-h-screen">
-      <Sidebar type="admin" />
+      <ClubSideBarAdmin />
       {
         clubInfo === null ? <div>Loading...</div> :
           <div>
