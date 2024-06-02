@@ -1,4 +1,5 @@
 import ClubSideBarAdmin from "@/components/ClubSideBarAdmin";
+import ClubSideBarStudent from "@/components/ClubSideBarStudent";
 import { clubs } from "@/libs/clubs";
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
@@ -16,7 +17,7 @@ export default function ClubName() {
     }, [name])
   return (
     <div className="flex gap-4 min-h-screen">
-      <ClubSideBarAdmin />
+      <ClubSideBarStudent />
       <div>
         {
             clubInfo === null ? <div>Loading...</div>

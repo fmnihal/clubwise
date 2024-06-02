@@ -12,7 +12,7 @@ export async function middleware(request:NextRequest) {
             await axios.get(serverURL + '/v1/api/auth/verify-student', {
                 withCredentials: true,
                 headers: {
-                    Cookie: request.cookies.getAll().toString()
+                    Cookie: request.cookies.toString()
                 }
             });
         } catch (error) {

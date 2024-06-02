@@ -7,6 +7,7 @@ import authRoutes from './routes/auth';
 import userRoutes from './routes/user';
 import postRoutes from './routes/post';
 import clubApplyRoutes from './routes/clubApproval';
+import bookRoomsRoutes from './routes/bookRooms';
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/v1/api/auth", authRoutes);
 app.use("/v1/api/club/post", postRoutes);
 app.use("/v1/api/club/application", clubApplyRoutes);
+app.use("/v1/api/club/book-rooms", bookRoomsRoutes);
 app.use("/v1/api/user", userRoutes);
 
 // Initialize Database
